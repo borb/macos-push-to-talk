@@ -20,13 +20,6 @@ class PushToTalk():
         print('Done. Bye!')
         exit(0)
 
-    def prompt_sudo(self):
-        ret = 0
-        if os.geteuid() != 0:
-            msg = "[sudo] password for %u:"
-            ret = subprocess.check_call("sudo -v -p '%s'" % msg, shell=True)
-        return ret
-
     def on_press(self, key):
         try:
             if key and key.name and key.name == self.push_to_talk_button:
@@ -58,9 +51,6 @@ class PushToTalk():
 ptt = PushToTalk()
 
 signal(SIGINT, ptt.handler)
-
-if ptt.prompt_sudo() != 0:
-    print("Failed to get root privileges. Exiting.")
 
 ptt.hush_mic()
 
