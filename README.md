@@ -26,7 +26,7 @@ Catalina has a more granular permissions framework. `root` permissions are not r
 
 In order to monitor keyboard events to make push-to-talk work whilst other applications have focus, permissions will be requested. When the dialog opens, click to get through to System Preferences and click the padlock; enter your password and tick "Terminal" or "iTerm" (or whichever terminal you used to launch the script above). You'll need to restart the terminal and relaunch `push-to-talk.py` before the permission can take effect. If you reject this permission, the hotkey will only operate when you have the launch terminal open.
 
-![.github/input-monitoring.png](input-monitoring.png)
+![.github/input-monitoring.png](.github/input-monitoring.png)
 
 ## Disclaimer
 
